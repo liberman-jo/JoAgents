@@ -2,7 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const cron = require("node-cron");
-require("dotenv").config();
+const dotenv = require("dotenv");
+
+dotenv.config({ path: path.join(__dirname, "../.env") });
+dotenv.config({ path: path.join(__dirname, "../../.env") });
 const { buildReport } = require("./reportBuilder");
 const { answerQuestion } = require("./services/audioService");
 const { generateDailyPodcast, getLatestPodcast } = require("./services/podcastService");
@@ -52,6 +55,7 @@ app.post("/podcast/generate", async (req, res) => {
     const result = await generateDailyPodcast({ manual: true });
     res.json(result);
   } catch (error) {
+    console.error("Podcast generation failed", error);
     res.status(500).json({ error: "Failed to generate podcast." });
   }
 });
