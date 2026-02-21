@@ -99,6 +99,15 @@
         </div>
         <div id="answerBody" class="muted">Responses show up here.</div>
       </section>
+      <section class="card stack">
+        <div class="label">Daily podcast</div>
+        <div class="row">
+          <button class="cta" id="generatePodcast">Generate podcast</button>
+          <a id="downloadPodcast" class="cta" href="#" download>Download MP3</a>
+        </div>
+        <audio id="podcastPlayer" controls style="width: 100%"></audio>
+        <div id="podcastStatus" class="muted">No podcast generated yet.</div>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>

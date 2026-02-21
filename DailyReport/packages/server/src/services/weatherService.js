@@ -13,7 +13,12 @@ const getWeather = async () => {
   const current = data.current || {};
   const temp = current.temperature_2m;
   const wind = current.wind_speed_10m;
-  return `Current weather for ${city}: ${temp} C, wind ${wind} km/h.`;
+  const tempF = typeof temp === "number" ? temp * 1.8 + 32 : null;
+  const tempLabel =
+    typeof temp === "number" && typeof tempF === "number"
+      ? `${temp.toFixed(1)} C / ${tempF.toFixed(1)} F`
+      : "Temperature unavailable";
+  return `Current weather for ${city}: ${tempLabel}, wind ${wind} km/h.`;
 };
 
 module.exports = { getWeather };
