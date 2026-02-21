@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Daily Report",
+    "slug": "daily-report",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "platforms": ["ios", "android"],
+    "jsEngine": "hermes"
+  }
+}

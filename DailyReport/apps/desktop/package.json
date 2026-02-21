@@ -1,0 +1,13 @@
+{
+  "name": "daily-report-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron . --disable-gpu --disable-software-rasterizer --disable-gpu-compositing",
+    "lint": "echo \"No lint configured\""
+  },
+  "dependencies": {
+    "electron": "^30.0.0"
+  }
+}

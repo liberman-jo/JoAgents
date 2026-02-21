@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Report</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Times New Roman", serif;
+        background: linear-gradient(135deg, #f2e9dc, #cbbf9a);
+        color: #1b1b1b;
+      }
+      header {
+        padding: 32px 40px 0;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 40px;
+      }
+      main {
+        padding: 16px 40px 40px;
+        display: grid;
+        gap: 18px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        padding: 20px 24px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      }
+      .cta {
+        display: inline-flex;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: none;
+        background: #1b1b1b;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Daily Report</h1>
+      <p>Audio-first briefing with interactive questions.</p>
+      <button class="cta" id="openReport">Open report</button>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Today</h2>
+        <p id="reportBody">Your report will populate here from the server.</p>
+      </section>
+      <section class="card">
+        <h2>Interactive audio</h2>
+        <p>Press play, then ask follow-up questions mid stream.</p>
+      </section>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

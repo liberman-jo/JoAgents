@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev-server",
+      "type": "shell",
+      "command": "npm run dev:server",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "dev-desktop",
+      "type": "shell",
+      "command": "npm run dev:desktop",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "dev-mobile",
+      "type": "shell",
+      "command": "npm run dev:mobile",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

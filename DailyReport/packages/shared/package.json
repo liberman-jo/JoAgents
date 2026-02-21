@@ -1,0 +1,9 @@
+{
+  "name": "daily-report-shared",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/reportSchema.js",
+  "scripts": {
+    "lint": "echo \"No lint configured\""
+  }
+}

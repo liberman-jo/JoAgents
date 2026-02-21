@@ -1,0 +1,14 @@
+{
+  "name": "daily-report",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace packages/server run dev",
+    "dev:desktop": "npm --workspace apps/desktop run dev",
+    "dev:mobile": "npm --workspace apps/mobile run dev",
+    "lint": "npm --workspaces run lint"
+  }
+}
