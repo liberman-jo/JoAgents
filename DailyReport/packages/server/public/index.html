@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Report</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background: radial-gradient(circle at top, #f7f1e7, #d7c9a8);
+        color: #1b1b1b;
+      }
+      header {
+        padding: 32px 40px 12px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 40px;
+      }
+      main {
+        padding: 12px 40px 40px;
+        display: grid;
+        gap: 18px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.86);
+        border-radius: 16px;
+        padding: 20px 24px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      }
+      .cta {
+        display: inline-flex;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: none;
+        background: #1b1b1b;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .row {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1fr auto;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #d8cbb0;
+        font-size: 14px;
+      }
+      .label {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .muted {
+        color: #4c4c4c;
+        font-size: 14px;
+      }
+      .stack {
+        display: grid;
+        gap: 8px;
+      }
+      @media (max-width: 720px) {
+        header,
+        main {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Daily Report</h1>
+      <p class="muted">Audio-first briefing with interactive questions.</p>
+      <button class="cta" id="refreshReport">Refresh report</button>
+    </header>
+    <main>
+      <section class="card stack">
+        <div class="label">Today</div>
+        <div id="reportBody" class="muted">Your report will populate here from the server.</div>
+      </section>
+      <section class="card stack">
+        <div class="label">Interactive Q&A</div>
+        <div class="row">
+          <input id="questionInput" type="text" placeholder="Ask a follow-up question" />
+          <button class="cta" id="askButton">Ask</button>
+        </div>
+        <div id="answerBody" class="muted">Responses show up here.</div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
